@@ -24,6 +24,7 @@
 	$user = "";
 	$pass = "";
 	$db_name = "";
+	$db_table = "sketch_saves";
 	
 	/**
 	 * Connect

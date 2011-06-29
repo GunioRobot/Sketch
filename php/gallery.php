@@ -13,16 +13,18 @@
 		
 		$featureID = mysql_real_escape_string( $_GET[ $SET_FEATURE ] );
 		
-		mysql_query( "UPDATE sketch_saves SET `featured`=1 WHERE id='$featureID'" ) or die( 'error' );
+		mysql_query( "UPDATE $db_table SET `featured`=1 WHERE id='$featureID'" ) or die( 'error' );
 		
 	}
+	
 	if( isset( $_GET[ $SET_DELETE ] ) ) {
 		
 		$deleteID = mysql_real_escape_string( $_GET[ $SET_DELETE ] );
 		
-		mysql_query( "DELETE FROM sketch_saves WHERE id='$deleteID'" ) or die( 'error' );
+		mysql_query( "DELETE FROM $db_table WHERE id='$deleteID'" ) or die( 'error' );
 		
 	}
+	
 	if( isset( $_GET[ 'load' ] ) && isset( $_GET[ 'start' ] ) && isset( $_GET[ 'end' ] ) ) {
 		$loadType = mysql_real_escape_string( $_GET[ 'load' ] );
 		$loadStart = mysql_real_escape_string( $_GET[ 'start' ] );
@@ -35,12 +37,12 @@
 			$orderBy = $loadType == $LOAD_TYPE_MOST_RECENT ? "`index`" : "views";
 			
 			if( $loadType == $LOAD_TYPE_FEATURED ) {
-				$data_query = mysql_query("SELECT * FROM sketch_saves WHERE `featured`=1 ORDER BY CAST(`index` AS SIGNED) DESC LIMIT $loadStart, $loadEnd");
-				$row_query = mysql_query("SELECT COUNT(*) FROM sketch_saves WHERE `featured`=1");
+				$data_query = mysql_query("SELECT * FROM $db_table WHERE `featured`=1 ORDER BY CAST(`index` AS SIGNED) DESC LIMIT $loadStart, $loadEnd");
+				$row_query = mysql_query("SELECT COUNT(*) FROM $db_table WHERE `featured`=1");
 			}
 			else {
-				$data_query = mysql_query("SELECT * FROM sketch_saves ORDER BY CAST($orderBy AS SIGNED) DESC LIMIT $loadStart, $loadEnd");
-				$row_query = mysql_query("SELECT COUNT(*) FROM sketch_saves");
+				$data_query = mysql_query("SELECT * FROM $db_table ORDER BY CAST($orderBy AS SIGNED) DESC LIMIT $loadStart, $loadEnd");
+				$row_query = mysql_query("SELECT COUNT(*) FROM $db_table");
 			}
 			
 			$numberOfTotalRows = array_shift( mysql_fetch_array($row_query) );
