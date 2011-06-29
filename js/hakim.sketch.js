@@ -65,11 +65,8 @@ var Sketch = (function() {
 	// during a replay
 	var REPLAY_INTERVAL = 20;
 	
-	// The number of points to draw per intervarl while replaying
+	// The number of points to draw per interval while replaying
 	var REPLAY_INTERVAL_SIZE = 2;
-	
-	// The number of times the game will be redrawn per second
-	var FRAMERATE = 40;
 	
 	// The world dimensions, defaults to full screen for touch devices
 	var world = { 
@@ -155,7 +152,6 @@ var Sketch = (function() {
 	var dashMode = false;
 	
 	var ui = {
-		ads: null,
 		header: null,
 		options: null,
 		saveButton: null,
@@ -175,7 +171,6 @@ var Sketch = (function() {
 		// Collect references to all DOM elements being used
 		canvas = document.getElementById('world');
 		
-		ui.ads = document.getElementById('adSense');
 		ui.header = document.getElementsByTagName('header')[0];
 		ui.options = document.getElementById('options');
 		ui.saveButton = document.getElementById('save-button');
@@ -665,12 +660,6 @@ var Sketch = (function() {
 		ui.options.style.width = world.width + 'px';
 		ui.options.style.left = cvx + 'px';
 		ui.options.style.top = cvy - 25 + 'px';
-		
-		if (ui.ads) {
-			ui.ads.style.position = 'absolute';
-			ui.ads.style.left = ((windowSize.width * 0.5) - 364) + 'px';
-			ui.ads.style.top = (windowSize.height - 30) + 'px';
-		}
 	}
 	
 	/**
