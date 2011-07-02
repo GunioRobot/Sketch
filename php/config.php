@@ -12,12 +12,12 @@
 	 * ---------------------------------------------------
 	 * | FIELD:    | TYPE:     | EXTRA:                  |
 	 * ---------------------------------------------------
-	 * | index     | int       | primary, auto increment |
-	 * | id        | text      | -                       |
-	 * | value     | text      | -                       |
-	 * | data      | text      | -                       |
-	 * | views     | int       | default '1'             |
-	 * | featured  | int       | default '0'             |
+	 * | index     | INT       | primary, auto increment |
+	 * | id        | TEXT      | -                       |
+	 * | value     | LONGTEXT  | -                       |
+	 * | date      | TEXT      | -                       |
+	 * | views     | INT       | default '1'             |
+	 * | featured  | INT       | default '0'             |
 	 * ---------------------------------------------------
 	 */
 	$host = "";
