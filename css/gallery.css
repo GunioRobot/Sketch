@@ -25,7 +25,7 @@ h2 {
 header {
 	background: #fff;
 	padding: 40px 0 40px 0;
-	
+
 	-webkit-box-shadow: 0 0 6px #333;
 	   -moz-box-shadow: 0 0 3px #333;
 	     -o-box-shadow: 0 0 6px #333;
@@ -36,21 +36,21 @@ header {
 		display: inline-block;
 		margin-top: 20px;
 		padding: 8px 16px;
-		
+
 		border-radius: 3px;
 		background: #FB956C;
 		color: #fff;
-		
+
 		text-align: center;
 		text-decoration: none;
 		font-family: Helvetica, Arial, sans-serif;
-		
+
 		-webkit-transition: all .11s ease-out;
 		   -moz-transition: all .11s ease-out;
 		     -o-transition: all .11s ease-out;
 		        transition: all .11s ease-out;
 	}
-	
+
 	header a.sketch:hover {
 		background: #fa6d35;
 	}
@@ -66,36 +66,36 @@ section {
 	section h2 {
 		margin-bottom: 5px;
 	}
-	
+
 	section ul.sketch-list {
 		margin-top: 20px;
 	}
-	
+
 	section ul.sketch-list li {
 		display: inline-block;
 		width: 240px;
 		height: 145px;
 		margin: 0 10px 10px 0;
-		
+
 		border: 4px #ddd solid;
 		background: #fefefe;
-		
+
 		-webkit-transition: all .11s ease-out;
 		   -moz-transition: all .11s ease-out;
 		     -o-transition: all .11s ease-out;
 		        transition: all .11s ease-out;
 	}
-	
+
 	section ul.sketch-list li a {
 		color: #666;
 		font-size: 14px;
 	}
-		
+
 		section ul.sketch-list li canvas {
 			width: 240px;
 			height: 145px;
 		}
-		
+
 		section ul.sketch-list li .details {
 			text-align: center;
 			display: block;
@@ -103,7 +103,7 @@ section {
 			top: -32px;
 			background: rgba(255,255,255,0.7);
 		}
-		
+
 		section ul.sketch-list li .details p,
 		section ul.sketch-list li .details span {
 			display: inline-block;
@@ -113,7 +113,7 @@ section {
 	section ul.sketch-list li:hover {
 		border: 4px #FB956C solid;
 	}
-	
+
 	section ul.sketch-list li:hover a {
 		color: #000;
 	}
@@ -122,21 +122,21 @@ section {
 		display: none;
 		margin-top: 10px;
 		padding: 8px 16px;
-		
+
 		border-radius: 3px;
 		background: #FB956C;
 		color: #fff;
-		
+
 		text-align: center;
 		text-decoration: none;
 		font-family: Helvetica, Arial, sans-serif;
-		
+
 		-webkit-transition: all .11s ease-out;
 		   -moz-transition: all .11s ease-out;
 		     -o-transition: all .11s ease-out;
 		        transition: all .11s ease-out;
 	}
-	
+
 		section .load-more:hover {
 			background: #fa6d35;
 		}
